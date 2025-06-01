@@ -42,8 +42,8 @@ function App() {
       {isError && <ErrorMessage />}
       {data && (
         <>
-          <MovieGrid movies={data.results} onMovieClick={setSelectedMovie} />
-          {data.total_pages > 1 && (
+         
+         {data.total_pages > 1 && (
               <>
       <ReactPaginate
         pageCount={data.total_pages}
@@ -58,6 +58,8 @@ function App() {
       />
        </>
     )}
+          <MovieGrid movies={data.results} onMovieClick={setSelectedMovie} />
+        
         </>
       )}
       {selectedMovie && (
